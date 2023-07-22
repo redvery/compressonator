@@ -1,0 +1,7 @@
+#!/bin/zsh
+extension="${1##*.}"
+filename="${1%.*}"
+input=$1
+output="${1%.*}.dds"
+echo "Encoding $input to $output"
+docker run -it --rm --platform linux/amd64 -v $(pwd):/data compressonator -fd DXT5 $input $output
