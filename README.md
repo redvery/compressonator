@@ -1,5 +1,9 @@
 # Compressonator in Docker
 
+Purpose of this Docker Image is to run Compressonator on Apple Silicon Macs.
+
+---
+
 ### Build docker image
 Since compressonator for linux is only available for the AMD64 platform, we create an image to emulate this.
 ```
