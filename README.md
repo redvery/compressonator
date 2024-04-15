@@ -1,6 +1,6 @@
 # Compressonator in Docker
 
-Purpose of this Docker Image is to run [Compressonator](https://github.com/GPUOpen-Tools/compressonator) on Apple Silicon Macs.
+Purpose of this Docker Image is to run [Compressonator](https://github.com/GPUOpen-Tools/compressonator) on the Mac. Works also on Apple Silicon.
 
 ---
 
