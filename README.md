@@ -19,7 +19,7 @@ Parameters can be anything you would normally pass to compressonator when it is 
 
 ---
 
-## Convenince scripts
+## Convenience scripts
 
 ### Place makedxt5 script in bin folder
 ```
