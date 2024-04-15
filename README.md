@@ -1,6 +1,6 @@
 # Compressonator in Docker
 
-Purpose of this Docker Image is to run Compressonator on Apple Silicon Macs.
+Purpose of this Docker Image is to run [Compressonator](https://github.com/GPUOpen-Tools/compressonator) on Apple Silicon Macs.
 
 ---
 
@@ -19,17 +19,19 @@ Parameters can be anything you would normally pass to compressonator when it is 
 
 ---
 
-## Convenience scripts
+## Convenience script
 
-### Place makedxt5 script in bin folder
+### Place compressonator script in any suitable bin folder
 ```
-cp makedxt5 /Users/user/bin
+mkdir -p ~/bin
+cp compressonator ~/bin
+chmod +x ~/bin/compressonator
 ```
 
 ### Usage
-To encode an image 'circle.png' to 'circle.dds' in DXT5 format use the following command:
+To encode the image `circle.png` to `circle.dds` in `DXT5` format use the following command:
 ```
-makedxt5 circle.png
+compressonator -fd DXT5 circle.png circle.dds
 ```
 
 
