@@ -1,2 +1,2 @@
 #!/bin/zsh
-docker run -it --rm --platform linux/amd64 -v $(pwd):/data compressonator "$@"
+docker run -it --rm --platform linux/amd64 --mount src="$(pwd)",target=/data,type=bind compressonator "$@"

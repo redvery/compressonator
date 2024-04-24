@@ -12,8 +12,8 @@ docker build -t compressonator --platform linux/amd64 .
 
 ### Start temporary container to execute compressonator
 ```
-docker run -it --rm --platform linux/amd64 -v $(pwd):/data compressonator <PARAMETERS>
-docker run -it --rm --platform linux/amd64 -v $(pwd):/data compressonator -fd DXT5 circle.png circle.dds
+docker run -it --rm --platform linux/amd64 -v "$(pwd):/data" compressonator <PARAMETERS>
+docker run -it --rm --platform linux/amd64 -v "$(pwd):/data" compressonator -fd DXT5 circle.png circle.dds
 ```
 Parameters can be anything you would normally pass to compressonator when it is locally installed.
 
