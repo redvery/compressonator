@@ -7,7 +7,7 @@ Purpose of this Docker Image is to run [Compressonator](https://github.com/GPUOp
 ### Build docker image
 Since compressonator for linux is only available for the AMD64 platform, we create an image to emulate this.
 ```
-docker build -t compressonator --platform linux/amd64 .
+docker build -t compressonator --platform linux/amd64 https://github.com/redvery/compressonator.git
 ```
 
 ### Start temporary container to execute compressonator

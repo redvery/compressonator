@@ -1,2 +1,19 @@
 #!/bin/zsh
-docker run -it --rm --platform linux/amd64 --mount src="$(pwd)",target=/data,type=bind compressonator "$@"
+
+# Extract arguments
+args="${*:1:$(($# - 2))}"
+
+# Extract input and output file paths
+input_path="${@: -2:1}"
+output_path="${@: -1}"
+
+# Extract directories
+input_dir="$(dirname "$input_path")"
+output_dir="$(dirname "$output_path")"
+
+# Extract basenames
+input_file="$(basename "$input_path")"
+output_file="$(basename "$output_path")"
+
+# Run Docker with both paths mounted
+docker run -it --rm --platform linux/amd64 --mount type=bind,src="$input_dir",target=/input --mount type=bind,src="$output_dir",target=/output compressonator "$args" "/input/$input_file" "/output/$output_file"
